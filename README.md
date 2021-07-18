@@ -34,7 +34,7 @@ $pdf_mode = 4;
         "--mount",
         "type=bind,source=%DIR%,target=/latex-workdir",
         "--mount",
-        "type=volume,src=latex-cache,dst=/latex-cache",
+        "type=volume,source=latex-cache,target=/latex-cache",
         "rin4046/texlive-ubuntu",
         "latexmk",
         "-silent",
