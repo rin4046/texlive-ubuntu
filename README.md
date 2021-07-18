@@ -60,3 +60,25 @@ $pdf_mode = 4;
   "latex-workshop.view.pdf.viewer": "tab"
 }
 ```
+## Fix SyncTeX file
+
+```jsonc
+{
+  "latex-workshop.latex.tools": [
+    {
+      "name": "synctex",
+      "command": "docker",
+      "args": [
+        "run",
+        "--rm",
+        "--mount",
+        "type=bind,source=%DIR%,target=/latex-workdir",
+        "rin4046/texlive-ubuntu",
+        "sed",
+        "-i",
+        "2c Input:1:%DOC_EXT%",
+        "%OUTDIR%/%DOCFILE%.synctex",
+      ]
+    }
+  }
+}
