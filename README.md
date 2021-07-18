@@ -60,6 +60,7 @@ $pdf_mode = 4;
   "latex-workshop.view.pdf.viewer": "tab"
 }
 ```
+
 ## Fix SyncTeX file
 
 ```jsonc
@@ -77,8 +78,9 @@ $pdf_mode = 4;
         "sed",
         "-i",
         "2c Input:1:%DOC_EXT%",
-        "%OUTDIR%/%DOCFILE%.synctex",
+        "%OUTDIR%/%DOCFILE%.synctex"
       ]
     }
-  }
+  ]
 }
+```
