@@ -26,12 +26,23 @@ $pdf_mode = 4;
     {
       "name": "latexmk",
       "command": "bash",
-      "args": ["path-to-texlive-ubuntu.sh", "latexmk", "%DIR%", "%OUTDIR%", "%DOCFILE%", "%DOC_EXT%"]
+      "args": [
+        "path-to-texlive-ubuntu.sh",
+        "latexmk",
+        "%DIR%",
+        "%OUTDIR%",
+        "%DOCFILE%",
+        "%DOC_EXT%"
+      ]
     }
   ],
 
   "latex-workshop.latexindent.path": "bash",
-  "latex-workshop.latexindent.args": ["path-to-texlive-ubuntu.sh", "latexindent", "%DIR%"],
+  "latex-workshop.latexindent.args": [
+    "path-to-texlive-ubuntu.sh",
+    "latexindent",
+    "%DIR%"
+  ],
 
   "latex-workshop.latex.outDir": "out",
   "latex-workshop.view.pdf.viewer": "tab"
