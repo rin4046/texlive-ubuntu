@@ -1,0 +1,20 @@
+#!/bin/bash
+
+docfile="${1}"
+outdir="${2}"
+docfile_noext="$(basename ${docfile%.*})"
+
+is_gzip=false
+
+cd "${outdir}"
+
+if [ -e "${docfile_noext}.synctex.gz" ]; then
+  is_gzip=true
+  gunzip "${docfile_noext}.synctex.gz"
+fi
+
+sed -i "2c Input:1:${docfile}" "${docfile_noext}.synctex"
+
+if ${is_gzip}; then
+  gzip "${docfile_noext}.synctex"
+fi
