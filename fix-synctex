@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 docfile="${1}"
 outdir="${2}"
 docfile_noext="$(basename ${docfile%.*})"
