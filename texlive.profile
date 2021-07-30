@@ -1,0 +1,12 @@
+instopt_adjustpath 1
+collection-basic 1
+collection-binextra 1
+collection-langjapanese 1
+collection-latex 1
+collection-latexrecommended 1
+collection-luatex 1
+collection-metapost 1
+collection-xetex 1
+tlpdbopt_install_docfiles 0
+tlpdbopt_install_srcfiles 0
+tlpdbopt_sys_bin /usr/local/bin
