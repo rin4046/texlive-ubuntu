@@ -1,6 +1,6 @@
-$ErrorActionPreference = "Stop"
-
 Param($Dir, $Commands)
+
+$ErrorActionPreference = "Stop"
 
 function Get-PosixPwd {
   "/$((Get-Location).Drive.Name.ToLowerInvariant())$($env:HOMEPATH.Replace('\', '/'))"
