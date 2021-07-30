@@ -24,7 +24,7 @@ $pdf_mode = 4;
   "latex-workshop.latex.tools": [
     {
       "name": "latexmk",
-      "command": "bash",
+      "command": "bash or pwsh",
       "args": [
         "path-to-texlive-ubuntu.sh(or .ps1)",
         "%DIR%",
@@ -32,7 +32,7 @@ $pdf_mode = 4;
       ]
     }
   ],
-  "latex-workshop.latexindent.path": "bash",
+  "latex-workshop.latexindent.path": "bash or pwsh",
   "latex-workshop.latexindent.args": [
     "path-to-texlive-ubuntu.sh(or .ps1)",
     "%DIR%",
