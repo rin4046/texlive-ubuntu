@@ -2,21 +2,20 @@
 
 set -e
 
-docfile="${1}"
-outdir="${2}"
-docfile_noext="$(basename ${docfile%.*})"
+doc="${1}"
+out="${2}"
+doc_noext="$(basename ${doc%.*})"
 
-is_gzip=false
+cd "${out}"
 
-cd "${outdir}"
-
-if [ -e "${docfile_noext}.synctex.gz" ]; then
-  is_gzip=true
-  gunzip "${docfile_noext}.synctex.gz"
-fi
-
-sed -i "2c Input:1:${docfile}" "${docfile_noext}.synctex"
+[ -e "${doc_noext}.synctex.gz" ] && is_gzip=true || is_gzip=false
 
 if ${is_gzip}; then
-  gzip "${docfile_noext}.synctex"
+  gunzip "${doc_noext}.synctex.gz"
+fi
+
+sed -i "2c Input:1:${doc}" "${doc_noext}.synctex"
+
+if ${is_gzip}; then
+  gzip "${doc_noext}.synctex"
 fi
