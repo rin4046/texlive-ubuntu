@@ -15,7 +15,6 @@ $pdf_mode = 4;
     "editor.wordWrap": "on",
     "editor.defaultFormatter": "James-Yu.latex-workshop"
   },
-
   "latex-workshop.latex.recipes": [
     {
       "name": "latexmk",
@@ -27,23 +26,18 @@ $pdf_mode = 4;
       "name": "latexmk",
       "command": "bash",
       "args": [
-        "path-to-texlive-ubuntu.sh",
-        "latexmk",
+        "path-to-texlive-ubuntu.sh(or .ps1)",
         "%DIR%",
-        "%OUTDIR%",
-        "%DOCFILE%",
-        "%DOC_EXT%"
+        "latexmk -silent -outdir=%OUTDIR% %DOCFILE% && fix-synctex %DOC_EXT% %OUTDIR%"
       ]
     }
   ],
-
   "latex-workshop.latexindent.path": "bash",
   "latex-workshop.latexindent.args": [
-    "path-to-texlive-ubuntu.sh",
-    "latexindent",
-    "%DIR%"
+    "path-to-texlive-ubuntu.sh(or .ps1)",
+    "%DIR%",
+    "latexindent __latexindent_temp.tex -y=defaultIndent: '%INDENT%'"
   ],
-
   "latex-workshop.latex.outDir": "out",
   "latex-workshop.view.pdf.viewer": "tab"
 }
