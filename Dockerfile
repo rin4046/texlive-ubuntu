@@ -1,7 +1,6 @@
 FROM ubuntu:latest
 
 ENV DEBIAN_FRONTEND=noninteractive
-ENV TEXMFCACHE=/latex-cache
 COPY fix-synctex /usr/local/bin/
 
 WORKDIR /tmp
@@ -19,5 +18,5 @@ RUN apt update && apt install -y \
  && install-tl-*/install-tl --profile texlive.profile \
  && rm -rf ./*
 
-WORKDIR /latex-workdir
+WORKDIR /workdir
 ENTRYPOINT ["bash", "-c"]

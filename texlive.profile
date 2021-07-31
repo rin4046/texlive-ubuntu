@@ -1,3 +1,4 @@
+TEXMFSYSVAR /texmf-var
 instopt_adjustpath 1
 collection-basic 1
 collection-binextra 1
