@@ -26,7 +26,7 @@ $pdf_mode = 4;
       "name": "latexmk",
       "command": "bash(or pwsh)",
       "args": [
-        "path-to-texlive-ubuntu.sh(or .ps1)",
+        "path-to-.texlive-ubuntu.sh(or .ps1)",
         "%DIR%",
         "latexmk -silent -outdir=%OUTDIR% %DOCFILE% && fix-synctex %DOC_EXT% %OUTDIR%"
       ]
@@ -34,9 +34,9 @@ $pdf_mode = 4;
   ],
   "latex-workshop.latexindent.path": "bash(or pwsh)",
   "latex-workshop.latexindent.args": [
-    "path-to-texlive-ubuntu.sh(or .ps1)",
+    "path-to-.texlive-ubuntu.sh(or .ps1)",
     "%DIR%",
-    "latexindent __latexindent_temp.tex -y=defaultIndent: '%INDENT%'"
+    "latexindent __latexindent_temp.tex -y=\"defaultIndent: '%INDENT%'\""
   ],
   "latex-workshop.latex.outDir": "out",
   "latex-workshop.view.pdf.viewer": "tab"
